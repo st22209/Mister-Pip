@@ -19,12 +19,12 @@ const CanvasLoader = () => {
 			<p
 				style={{
 					fontSize: 14,
-					color: "#F1F1F1",
+					color: "red",
 					fontWeight: 800,
 					marginTop: 40,
 				}}
 			>
-				{progress.toFixed(2)}%
+				{`Loading 3d Book: ${progress.toFixed(2)}`}%
 			</p>
 		</Html>
 	);
