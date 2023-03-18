@@ -1,7 +1,6 @@
-import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Html, useProgress } from "@react-three/drei";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Suspense, useEffect, useState } from "react";
+import { OrbitControls, useGLTF, Html, useProgress } from "@react-three/drei";
 
 const CanvasLoader = () => {
 	const { progress } = useProgress();
@@ -31,7 +30,7 @@ const CanvasLoader = () => {
 	);
 };
 
-const BookModel = (props: any) => {
+const BookModel = () => {
 	const book = useGLTF("./misterpip.glb");
 
 	return (
@@ -84,7 +83,7 @@ const MisterPipBook = () => {
 					minPolarAngle={Math.PI / 2}
 					// autoRotateSpeed={5}
 				/>
-				<directionalLight position={[3, 2, 1]} intensity={0.5} />
+				<directionalLight position={[10, 3, 1]} intensity={0.1} />
 
 				<ambientLight intensity={0.75} />
 				<BookModel />
