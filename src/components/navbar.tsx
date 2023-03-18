@@ -9,12 +9,13 @@ const Navbar = () => {
 
 	return (
 		<nav>
-			<div className="max-w-7xl mx-auto pt-2 px-4 sm:px-6 lg:px-8">
+			<div className="pt-2 px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
 					<div className="flex-shrink-0">
 						<a
 							href="/"
-							className="text-[#3E5E61] text-2xl font-bold font-poppinsbold"
+							className="text-[#3E5E61] text-2xl font-bold font-poppinsbold tracking-wide
+							"
 						>
 							MISTER PIP
 						</a>
