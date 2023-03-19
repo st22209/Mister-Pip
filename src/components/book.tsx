@@ -78,6 +78,25 @@ const MisterPipBook = () => {
 		};
 	});
 
+	const [enableExtraControls, setEnableExtraControls] = useState(false);
+	useEffect(() => {
+		// allow use to be able to zoom and pan when they hit z
+		const keyHandler = (event: KeyboardEvent) => {
+			if (event.key === "z") {
+				event.preventDefault();
+				setEnableExtraControls(!enableExtraControls);
+
+				if (enableExtraControls) {
+					window.location.reload();
+				}
+			}
+		};
+		document.addEventListener("keydown", keyHandler);
+		return () => {
+			document.removeEventListener("keydown", keyHandler);
+		};
+	});
+
 	return (
 		<Canvas
 			shadows
@@ -94,8 +113,8 @@ const MisterPipBook = () => {
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls
 					autoRotate={autoRotate}
-					enableZoom={false}
-					enablePan={false}
+					enableZoom={enableExtraControls}
+					enablePan={enableExtraControls}
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
 					// autoRotateSpeed={5}
