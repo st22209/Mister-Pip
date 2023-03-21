@@ -10,7 +10,10 @@ module.exports = {
         poppins: ["Poppins"],
         poppinsbold: ["PoppinsBold"],
       },
-    },
-    plugins: [],
+      backgroundImage: {
+        'author1': "url('/src/assets/author1.jpg')",
+      },
+      plugins: [],
+    }
   }
 }
