@@ -7,6 +7,9 @@ const Navbar = () => {
 		setIsOpen(!isOpen);
 	};
 
+	const underline_transition =
+		" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-black dark:before:bg-[#3E5E61] before:absolute before:left-0 before:bottom-0";
+
 	return (
 		<nav>
 			<div className="pt-2 px-4 sm:px-6 lg:px-8">
@@ -14,8 +17,10 @@ const Navbar = () => {
 					<div className="flex-shrink-0">
 						<a
 							href="/"
-							className="text-[#3E5E61] text-2xl font-bold font-poppinsbold tracking-wide
-							"
+							className={
+								"text-[#3E5E61] text-2xl font-bold font-poppinsbold tracking-wide" +
+								underline_transition
+							}
 						>
 							MISTER PIP
 						</a>
@@ -24,19 +29,28 @@ const Navbar = () => {
 						<div className="ml-4 flex items-center md:ml-6">
 							<a
 								href="/about"
-								className="text-[#787878] hover:text-red-400 mx-6 py-2 rounded-md text-lg font-medium font-poppins"
+								className={
+									"text-[#787878] hover:text-black hover:shadow-sm mx-6 rounded-md text-lg font-medium font-poppins" +
+									underline_transition
+								}
 							>
 								About
 							</a>
 							<a
 								href="/characters"
-								className="text-[#787878] hover:text-red-400 mx-6 py-2 rounded-md text-lg font-medium font-poppins"
+								className={
+									"text-[#787878]  hover:text-black hover:shadow-sm mx-6 rounded-md text-lg font-medium font-poppins" +
+									underline_transition
+								}
 							>
 								Characters
 							</a>
 							<a
 								href="/author"
-								className="text-[#787878] hover:text-red-400 mx-6 py-2 rounded-md text-lg font-medium font-poppins"
+								className={
+									"text-[#787878]  hover:text-black hover:shadow-sm mx-6 rounded-md text-lg font-medium font-poppins" +
+									underline_transition
+								}
 							>
 								Author
 							</a>
