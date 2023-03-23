@@ -1,11 +1,16 @@
+import War from "./war.jpeg";
 import Book1 from "./book1.jpg"
 import Book2 from "./book2.jpg"
 import Book3 from "./book3.jpg"
 import Book4 from "./book4.jpg"
 import Book5 from "./book5.jpg"
 import Book6 from "./book6.jpg"
+import Mine from "./mines.jpeg"
+import Movie from "./movie.jpg"
+import Vilage from "./village.jpeg"
 import Author1 from "./author1.jpg";
 import Author2 from "./author2.jpg";
+import Map from "./bougainville.png"
 import BookCoverBlue from "./bookcover.jpg"
 
 const books = [
@@ -51,5 +56,10 @@ export {
     books,
     Author1,
     Author2,
-    BookCoverBlue
+    BookCoverBlue,
+    Map,
+    Vilage,
+    Movie,
+    Mine,
+    War
 }
