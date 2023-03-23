@@ -10,35 +10,46 @@ type imageTextProps = {
 };
 
 const ImageText = (props: imageTextProps) => {
-	console.log(props.side);
+	const imageDiv = (
+		<motion.div
+			initial={{ opacity: 0, x: -200 }}
+			animate={{ opacity: 1, x: 0 }}
+			transition={{ delay: 0.5, ease: "easeInOut" }}
+			className={`m-auto h-64 overflow-hidden rounded-2xl sm:h-80 lg:h-full flex items-center justify-center`}
+		>
+			<img
+				src={props.image}
+				className="h-fit w-fit rounded-2xl shadow-xl"
+			/>
+		</motion.div>
+	);
+	const textDiv = (
+		<motion.div
+			initial={{ opacity: 0, x: 200 }}
+			animate={{ opacity: 1, x: 0 }}
+			transition={{ delay: 0.5, ease: "easeInOut" }}
+			className="lg:py-24"
+		>
+			<h2 className="text-3xl font-bold sm:text-4xl ">{props.title}</h2>
+
+			<div className="mt-4 text-gray-600">{props.paragraph}</div>
+		</motion.div>
+	);
+
 	return (
 		<div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-			<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-				<motion.div
-					initial={{ opacity: 0, x: -200 }}
-					animate={{ opacity: 1, x: 0 }}
-					transition={{ delay: 0.5, ease: "easeInOut" }}
-					className={`m-auto h-64 overflow-hidden rounded-2xl sm:h-80 lg:order-${props.side} lg:h-full flex items-center justify-center`}
-				>
-					<img
-						src={props.image}
-						className="h-fit w-fit rounded-2xl shadow-xl"
-					/>
-				</motion.div>
-
-				<motion.div
-					initial={{ opacity: 0, x: 200 }}
-					animate={{ opacity: 1, x: 0 }}
-					transition={{ delay: 0.5, ease: "easeInOut" }}
-					className="lg:py-24"
-				>
-					<h2 className="text-3xl font-bold sm:text-4xl ">
-						{props.title}
-					</h2>
-
-					<div className="mt-4 text-gray-600">{props.paragraph}</div>
-				</motion.div>
-			</div>
+			{props.side === "first" ? (
+				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+					{imageDiv}
+					{textDiv}
+				</div>
+			) : (
+				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+					{textDiv}
+					{imageDiv}
+				</div>
+			)}
+			<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16"></div>
 		</div>
 	);
 };
