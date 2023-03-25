@@ -37,13 +37,13 @@ const Navbar = () => {
 								Context
 							</a>
 							<a
-								href="/characters"
+								href="/gallery"
 								className={
 									"text-[#787878]  hover:text-black hover:shadow-sm mx-6 rounded-md text-lg font-medium font-poppins" +
 									underline_transition
 								}
 							>
-								Characters
+								Gallery
 							</a>
 							<a
 								href="/author"
@@ -99,10 +99,10 @@ const Navbar = () => {
 							Context
 						</a>
 						<a
-							href="/characters"
+							href="/gallery"
 							className="text-[#787878] hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium font-poppins"
 						>
-							Characters
+							Gallery
 						</a>
 						<a
 							href="/author"

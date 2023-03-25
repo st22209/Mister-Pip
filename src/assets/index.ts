@@ -12,6 +12,7 @@ import Author1 from "./author1.jpg";
 import Author2 from "./author2.jpg";
 import Map from "./bougainville.png"
 import BookCoverBlue from "./bookcover.jpg"
+import GalleryImages from "./gallery";
 
 const books = [
     [
@@ -61,5 +62,6 @@ export {
     Vilage,
     Movie,
     Mine,
-    War
+    War,
+    GalleryImages
 }
