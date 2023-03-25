@@ -28,13 +28,13 @@ const Navbar = () => {
 					<div className="hidden md:block">
 						<div className="ml-4 flex items-center md:ml-6">
 							<a
-								href="/about"
+								href="/context"
 								className={
 									"text-[#787878] hover:text-black hover:shadow-sm mx-6 rounded-md text-lg font-medium font-poppins" +
 									underline_transition
 								}
 							>
-								About
+								Context
 							</a>
 							<a
 								href="/characters"
@@ -93,10 +93,10 @@ const Navbar = () => {
 				<div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
 					<div className="px-2 pt-2 pb-3 sm:px-3">
 						<a
-							href="/about"
+							href="/context"
 							className="text-[#787878] hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium font-poppins"
 						>
-							About
+							Context
 						</a>
 						<a
 							href="/characters"

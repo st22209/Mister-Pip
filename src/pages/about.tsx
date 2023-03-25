@@ -58,7 +58,7 @@ const About = () => {
 	return (
 		<div>
 			<div className="flex flex-col text-4xl md:text-5xl xl:text-6xl font-bold font-poppins text-center items-center text-black my-12 lg:flex">
-				<h1>About the book</h1>
+				<h1>Context for the book</h1>
 			</div>
 			<WhenInView
 				div={

@@ -15,7 +15,7 @@ export const AnimatedRoutes = () => {
 			>
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<pages.Home />}></Route>
-					<Route path="/about" element={<pages.About />}></Route>
+					<Route path="/context" element={<pages.About />}></Route>
 					<Route
 						path="/characters"
 						element={<pages.Characters />}
