@@ -69,26 +69,28 @@ const Gallery = () => {
 					hit the back arrow or the go to home button.
 				</p>
 			</div>
-			{GalleryImages.map((img: string) => (
-				<img
-					src={img}
-					className="image hidden absolute w-[50vmin] translate-x-[-50%] translate-y-[-50%] shadow-2xl rounded-md"
-					alt="Mister Pip Related Image"
-				/>
-			))}
+			{GalleryImages.map((value) => ({ value, sort: Math.random() }))
+				.sort((a, b) => a.sort - b.sort)
+				.map(({ value }) => value)
+				.map((img: string) => (
+					<img
+						src={img}
+						className="image hidden absolute w-[50vmin] translate-x-[-50%] translate-y-[-50%] shadow-2xl rounded-md"
+						alt="Mister Pip Related Image"
+					/>
+				))}
 			<div className="absolute flex flex-col items-center bottom-0 m-5 shadow-2xl">
-
-			<a
-				href="/"
-				className="bg-[#3E5E61] relative inline-flex items-center justify-start px-8 py-[0.76rem] overflow-hidden font-bold text-sm rounded group z-40"
+				<a
+					href="/"
+					className="bg-[#3E5E61] relative inline-flex items-center justify-start px-8 py-[0.76rem] overflow-hidden font-bold text-sm rounded group z-40"
 				>
-				<span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-red-500 opacity-[0%]"></span>
-				<span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-red-500 opacity-100 group-hover:-translate-x-8"></span>
-				<span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out">
-					Back To Home
-				</span>
-			</a>
-				</div>
+					<span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-red-500 opacity-[0%]"></span>
+					<span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-red-500 opacity-100 group-hover:-translate-x-8"></span>
+					<span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out">
+						Back To Home
+					</span>
+				</a>
+			</div>
 		</div>
 	);
 };
