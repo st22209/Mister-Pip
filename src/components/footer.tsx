@@ -28,7 +28,7 @@ const Footer = () => {
 					<ul className="flex flex-wrap items-center mb-6 font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
 						<li>
 							<a
-								href="#"
+								href="/context"
 								className="mr-4 hover:underline md:mr-6 "
 							>
 								Context
@@ -36,7 +36,7 @@ const Footer = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/gallery"
 								className="mr-4 hover:underline md:mr-6"
 							>
 								Gallery
@@ -44,7 +44,7 @@ const Footer = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/author"
 								className="mr-4 hover:underline md:mr-6 "
 							>
 								Author
