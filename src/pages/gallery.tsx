@@ -48,14 +48,16 @@ const Gallery = () => {
 
 		document.addEventListener("mousemove", mouseMove);
 		document.addEventListener("touchmove", touchMove);
+		document.body.style.overflowY = "hidden";
 		return () => {
 			document.removeEventListener("mousemove", mouseMove);
 			document.removeEventListener("touchmove", touchMove);
+			document.body.style.overflowY = "";
 		};
 	});
 
 	return (
-		<div className="overflow-y-hidden">
+		<div>
 			<div className="flex flex-col font-poppins text-center items-center text-black lg:flex">
 				<br />
 				<h1 className="text-4xl md:text-5xl xl:text-6xl font-bold ">
