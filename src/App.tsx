@@ -1,5 +1,5 @@
 import * as pages from "./pages";
-import { Navbar } from "./components";
+import { Navbar, Footer } from "./components";
 import { AnimatePresence, motion } from "framer-motion";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
@@ -34,6 +34,7 @@ function App() {
 			<BrowserRouter>
 				<Navbar />
 				<AnimatedRoutes />
+				{location.pathname !== "/gallery" && <Footer />}
 			</BrowserRouter>
 		</div>
 	);
