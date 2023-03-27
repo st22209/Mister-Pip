@@ -328,6 +328,22 @@ const About = () => {
 					/>
 				}
 			/>
+			<WhenInView
+				div={
+					<motion.div className="flex items-center mx-auto flex-col text-5x aspect-video">
+						<h2 className="text-3xl font-bold sm:text-4xl m-6">
+							Mister Pip Movie Trailer
+						</h2>
+						<iframe
+							className="w-[75%] h-[75%] shadow-2xl"
+							src="https://www.youtube.com/embed/tRn3gr8Pt_o"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowFullScreen
+						></iframe>
+					</motion.div>
+				}
+			/>
 		</div>
 	);
 };

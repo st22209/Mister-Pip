@@ -13,7 +13,9 @@ module.exports = {
       backgroundImage: {
         'author1': "url('/src/assets/author1.jpg')",
       },
-      plugins: [],
+      plugins: [
+        require('@tailwindcss/aspect-ratio'),
+      ],
     }
   }
 }
